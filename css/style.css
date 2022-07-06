@@ -1,0 +1,165 @@
+/*Universal selector*/
+* {
+    box-sizing: border-box;
+}
+/* /////////////////////////////////////////////////////////
+            CSS BODY
+ /////////////////////////////////////////////////////////*/
+body main {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+}
+ /* /////////////////////////////////////////////////////////
+            CSS HEADER
+ /////////////////////////////////////////////////////////*/
+header {
+    background-color: #308383;
+    padding: 15px 0;
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+header img {
+    width: 100px;
+}
+nav {
+    text-align: right;
+}
+nav a {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+nav a:nth-child(4), nav a:nth-child(6){
+    background-color: #2d6666;
+    border-radius: 10%;
+}
+nav a:hover {
+    color: #224444;
+}
+ /* /////////////////////////////////////////////////////////
+            CSS MAIN
+ /////////////////////////////////////////////////////////*/
+ h1, main section:first-of-type div > h2, main section:nth-of-type(2) div > h2{
+    color: red;
+    font-size: 32px;
+}
+article div img:nth-child(2) {
+    width:100%;
+}
+/*Float des images */
+div p:nth-child(3) [src="img/land.jpg"]{
+    float: left;
+    padding-right: 25px;
+}
+div p:nth-child(5) [src="img/land.jpg"]{
+    float: right;
+    padding-left: 15px;
+}
+div p:nth-child(3){
+    margin-top: 50px;
+}
+/*Positionnement de farnce, Québec, Wallonnie */
+div p:nth-child(7) ~ a{
+    display: block;
+    text-decoration: none;
+}
+/* Couleur de farnce, Québec, Wallonnie*/
+div p:nth-child(7) + a{
+    color: #0055a4;
+}
+div a:nth-child(8) + a{
+   color: #f42837;
+}
+div a:nth-child(9) + a{
+    color: #000;
+}
+/*Flex de deux articles*/
+section div div article:first-of-type h2, section div div article:nth-of-type(2) h2{
+    color: #2d6666;
+    font-size: 24px;
+}
+section:first-of-type div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+}
+section:first-of-type div:nth-child(2) article:first-of-type{
+    margin-right: 50px;
+}
+/* Positionnement Tableux */
+section div article:nth-of-type(1) h2, section div article:nth-of-type(2) h2{
+    color: #2d6666;
+    font-size: 24px;
+}
+/*  Table.1*/
+article:first-of-type table{
+    width: 100%;
+    margin: 0 auto;
+    height: 30px;
+    border-spacing: 20px 5px;
+}
+article:first-of-type thead{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+article:first-of-type table tr, article:first-of-type table td{
+    border: 1px solid #ccc;
+    border-collapse: separate;
+}
+article:first-of-type table tbody tr:first-of-type td:first-child,
+article:first-of-type table tbody tr:first-of-type td:nth-child(3),
+article:first-of-type table tbody tr:nth-of-type(2) td:nth-child(2){
+    background-color: #cccccc;
+}
+/*  Tble.2*/
+article:nth-of-type(2) table{
+    width: 100%;
+    margin: 0 auto;
+    height: 30px;
+    border-spacing: 20px 5px;
+}
+article:nth-of-type(2) thead{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+article:nth-of-type(2) table tr, article:nth-of-type(2) table td{
+    border: 1px solid #ccc;
+    border-collapse: separate;
+}
+article:nth-of-type(2) table tbody tr:first-of-type td:nth-child(2),
+article:nth-of-type(2) table tbody tr:nth-of-type(2) td:first-child,
+article:nth-of-type(2) table tbody tr:nth-of-type(2) td:nth-child(3),
+article:nth-of-type(2) table tbody tr:nth-of-type(3) td:nth-child(2){
+    background-color: #cccccc;
+}
+/*  La Galérie*/
+main section:nth-of-type(2) h2 + div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+main section:nth-of-type(2) div img{
+    width: 23%;
+    margin-bottom: 40px;
+    /*flex-basis: 10%;*/
+}
+ /* /////////////////////////////////////////////////////////
+            FOOTER
+ /////////////////////////////////////////////////////////*/
+ footer{
+     background-color: #9d1414;
+     text-align: center;
+     color: white;
+     height: 120px;
+    padding-top: 40px;
+    margin-top: 50px;
+ }
